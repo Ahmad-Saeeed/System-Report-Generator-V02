@@ -1,10 +1,6 @@
 # -*- mode: python ; coding: utf-8 -*-
 
-from PyInstaller.utils.hooks import collect_submodules
-
 hiddenimports = ['build_email']
-# Keep this explicit in case Pillow's dynamically used modules need discovery.
-hiddenimports += collect_submodules('PIL')
 
 a = Analysis(
     ['TMS_Report_Generator.py'],
